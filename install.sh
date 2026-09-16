@@ -40,6 +40,9 @@ echo "Building release binaries..." >&2
 # Install the main TUI binary.
 cp "$RUST_DIR/target/release/dbz" "$INSTALL_DIR/dbz"
 
+# Install the episode data beside the binary so `dbz` works from any directory.
+cp "$PROJECT_DIR/episodes.json" "$INSTALL_DIR/episodes.json"
+
 # Install the helper binaries.
 for bin in get_video enrich add_covers; do
     if [[ -x "$RUST_DIR/target/release/$bin" ]]; then
