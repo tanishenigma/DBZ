@@ -1,0 +1,18 @@
+# Local Python environment
+.venv/
+
+# Rust build artifacts
+rust/target/
+
+# Generated data and local playback state
+episodes_backup.json
+history.json
+
+# Workspace metadata
+.agents/
+.codex/
+
+# Common local caches
+__pycache__/
+*.py[cod]
+.pytest_cache/

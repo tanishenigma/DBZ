@@ -1,0 +1,32 @@
+[package]
+name = "dbz"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "dbz"
+path = "src/main.rs"
+
+[[bin]]
+name = "get_video"
+path = "src/bin/get_video.rs"
+
+[[bin]]
+name = "enrich"
+path = "src/bin/enrich.rs"
+
+[[bin]]
+name = "add_covers"
+path = "src/bin/add_covers.rs"
+
+[dependencies]
+ratatui = "0.29"
+ratatui-image = { version = "1", default-features = false, features = ["crossterm", "image-defaults"] }
+crossterm = "0.28"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+reqwest = { version = "0.12", features = ["blocking", "json"] }
+scraper = "0.20"
+regex = "1"
+anyhow = "1"
+image = { version = "0.25", default-features = false, features = ["webp", "png", "jpeg"] }
